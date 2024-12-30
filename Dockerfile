@@ -1,13 +1,11 @@
-FROM golang:1.21-alpine
+FROM golang:1.23.4-alpine
 
 WORKDIR /app
 
-COPY go.mod ./
-COPY *.go ./
+COPY . .
 
 RUN go build -o main .
 
-EXPOSE 8080
+EXPOSE 8081
 
 CMD ["./main"]
-

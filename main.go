@@ -16,8 +16,8 @@ func main() {
 		json.NewEncoder(w).Encode(response)
 	})
 
-	log.Printf("Server starting on port 8080...")
-	if err := http.ListenAndServe(":8080", nil); err != nil {
+	log.Printf("Server starting on port 8081...")
+	if err := http.ListenAndServe(":8081", nil); err != nil {
 		log.Fatal(err)
 	}
 }
